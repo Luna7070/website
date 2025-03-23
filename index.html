@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            user-select: none; /* Disable text and image selection globally */
         }
 
         body {
@@ -30,10 +31,11 @@
         }
 
         .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            border-radius: 0; /* Square image */
             margin-bottom: 15px;
+            pointer-events: none; /* Prevent image from being dragged or selected */
         }
 
         .username {
@@ -43,16 +45,19 @@
         }
 
         .links a {
-            display: block;
+            display: flex; /* Use flexbox for alignment */
+            align-items: center; /* Center items vertically */
+            justify-content: center; /* Center items horizontally */
+            gap: 8px; /* Space between icon and text */
             width: 100%;
-            padding: 15px;
+            padding: 8px 12px; /* Adjust padding for smaller height */
             margin: 10px 0;
             background-color: black;
             color: white;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 14px; /* Smaller font size */
             font-weight: bold;
-            border-radius: 6px;
+            border-radius: 6px; /* Rounded corners */
             transition: background-color 0.3s ease;
         }
 
