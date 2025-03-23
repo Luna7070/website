@@ -2,49 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Luna</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
+        /* Reset margin and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
             background-color: #fff;
-            margin: 0;
-            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh; /* Ensure the body takes at least the full viewport height */
         }
+
         .container {
-            width: 350px;
+            width: 100%;
+            max-width: 350px; /* Max width for larger screens */
             text-align: center;
+            padding: 20px;
         }
+
         .profile-img {
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .username {
+            font-size: 24px;
+            font-weight: bold;
             margin-bottom: 10px;
         }
-        .username {
-            font-size: 20px;
-            font-weight: bold;
-        }
+
         .links a {
             display: block;
             width: 100%;
-            padding: 10px;
-            margin: 5px 0;
+            padding: 15px;
+            margin: 10px 0;
             background-color: black;
             color: white;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: bold;
             border-radius: 6px;
+            transition: background-color 0.3s ease;
         }
+
+        .links a:hover {
+            background-color: #333;
+        }
+
         .footer {
-            margin-top: 15px;
-            font-size: 12px;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
         }
     </style>
 </head>
